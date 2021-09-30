@@ -8,40 +8,67 @@
 </head>
 <body>
     <div class="container">
+
+        <!-- <form class="calculator" name="calc">
+            <input type="text"class="value" name="txt" readonly="">
+            <span class="number clear" onclick="document.calc.txt.value =''">c</span>
+            <span class="number" onclick="document.calc.txt.value +='%'">%</span>
+            <span class="number" onclick="document.calc.txt.value +='/'">/</span>
+            <span class="number" onclick="document.calc.txt.value +='7'">7</span>
+            <span class="number" onclick="document.calc.txt.value +='8'">8</span>
+            <span class="number" onclick="document.calc.txt.value +='9'">9</span>
+            <span class="number" onclick="document.calc.txt.value +='*'">*</span>
+            <span class="number" onclick="document.calc.txt.value +='4'">4</span>
+            <span class="number" onclick="document.calc.txt.value +='5'">5</span>
+            <span class="number" onclick="document.calc.txt.value +='6'">6</span>
+            <span class="number" onclick="document.calc.txt.value +='-'">-</span>
+            <span class="number" onclick="document.calc.txt.value +='1'">1</span>
+            <span class="number" onclick="document.calc.txt.value +='2'">2</span>
+            <span class="number" onclick="document.calc.txt.value +='3'">3</span>
+            <span class="number plus" onclick="document.calc.txt.value +='+'">+</span>
+            <span class="number zero" onclick="document.calc.txt.value +='0'">0</span>
+            <span class="number" onclick="document.calc.txt.value +='.'">.</span>
+            <span class="number equal" onclick="document.calc.txt.value = eval(calc.txt.value)">=</span>
+     
+        </form> -->
+
+
     <table>
         <tbody>
         <tr>
-            <th colspan="4" class="th"></th>
+            <th colspan="4" class="th"><input type="text" id="input" value=""></th>
         </tr>
         <tr>
-            <td>+</td>
-            <td>-</td>
-            <td>x</td>
-            <td>/</td>
+            <td onclick=inputPlus()>+</td>
+            <td onclick=inputMinus()>-</td>
+            <td onclick=inputMultiply()>x</td>
+            <td onclick=inputDivide()>/</td>
         </tr>
         <tr>
-            <td>7</td>
-            <td>8</td>
-            <td>9</td>
-            <td rowspan="4" class="equal">=</td>
+            <td onclick=input7()>7</td>
+            <td onclick=input8()>8</td>
+            <td onclick=input9()>9</td>
+            <td rowspan="4" class="equal" onclick=result()>=</td>
         </tr>
         <tr>
-            <td>4</td>
-            <td>5</td>
-            <td>6</td>
+            <td onclick=input4()>4</td>
+            <td onclick=input5()>5</td>
+            <td onclick=input6()>6</td>
         </tr>
         <tr>
-            <td>1</td>
-            <td>2</td>
-            <td>3</td>
+            <td onclick=input1()>1</td>
+            <td onclick=input2()>2</td>
+            <td onclick=input3()>3</td>
         </tr>
         <tr>
-            <td>0</td>
-            <td>.</td>
-            <td class="ac">AC</td>
+            <td onclick=input0()>0</td>
+            <td onclick=inputDot()>.</td>
+            <td class="ac" onclick=clearInput()>AC</td>
         </tr>
     </tbody>
     </table>
 </div>
+
+<script src="App.js"></script>
 </body>
 </html>
